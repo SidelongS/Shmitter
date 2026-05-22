@@ -8,7 +8,7 @@ const Stats = () => {
     return (
         <div className={'user-stats'}>
             <div>
-                <Avatar/>
+                <Avatar size={'large'}/>
                 {user.name}
             </div>
             <div className={'stats'}>
