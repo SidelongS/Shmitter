@@ -5,7 +5,6 @@ const Avatar = ({size}) => {
     const {user, setUser} = useContext(ShmitterContext);
 
     const handleClick = () => {
-        if (size !== 'large') return;
         const newUrl = prompt('Enter new avatar URL:');
         if (newUrl) {
             setUser({...user, avatar: newUrl});
