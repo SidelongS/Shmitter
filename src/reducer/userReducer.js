@@ -7,7 +7,12 @@ type State = {
 
 import {CHANGE_AVATAR, CHANGE_NAME} from "../actions/userActions.js";
 
-export const userReducer = (state, action) => {
+const initialState = {
+    avatar: 'https://gravatar.com/avatar/000?d=monsterid',
+    name: 'Monster'
+}
+
+export const userReducer = (state = initialState, action) => {
     switch (action.type) {
         case CHANGE_AVATAR:
             return {...state, avatar: action.payload || state.avatar}
